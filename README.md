@@ -1,8 +1,10 @@
-# Webpage-on-Swarm
+#  Freedom Webpages on Swarm Decentralized Storage
 
-1.  https://bah5acgzajqmmtr236w3s7dmvipisdrhqpj7kthv2zu2opted3uhpehyqtyoq.bzz.link/    (https://freedomhouse.org/)
+Below are list of informative/educative digital freedom with credit to the source website. 
 
-2.  https://bah5acgzafmne6bkryscumbrq7zs6w43p6zn2rlaeylj4ls25fbn6xru5hxsq.bzz.link/    (https://en.wikipedia.org/wiki/Main_Page)
+  1.  https://bah5acgzajqmmtr236w3s7dmvipisdrhqpj7kthv2zu2opted3uhpehyqtyoq.bzz.link/    (https://freedomhouse.org/) 
+
+2.  https://bah5acgzafmne6bkryscumbrq7zs6w43p6zn2rlaeylj4ls25fbn6xru5hxsq.bzz.link/      (https://en.wikipedia.org/wiki/Main_Page)
 
 3.  https://bah5acgza3f24y3gni4j5yomkjpcg6bxtybmx7fufemiwy6virp6dfp4mii7q.bzz.link/     (https://www.iberdrola.com/)
 
