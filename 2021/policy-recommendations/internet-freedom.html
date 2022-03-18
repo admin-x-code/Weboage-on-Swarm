@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# " class="hide-title">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam-cell.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"11e35e2593",applicationID:"203586362"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(10),c=t(11),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(12);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],7:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(9),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],8:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],9:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],10:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],11:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],12:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(10),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!P++){var t=M.info=NREUM.info,e=g.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(O,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+M.offset],null,"api"),c("timing",["load",n]);var r=g.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=v+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===g.readyState&&o()}function o(){c("mark",["domContent",a()+M.offset],null,"api")}var a=t(5),c=t("handle"),f=t(10),u=t("ee"),s=t(8),d=t(6),p=t(2),l=t(3),v=p.getConfiguration("ssl")===!1?"http":"https",m=window,g=m.document,y="addEventListener",h="attachEvent",w=m.XMLHttpRequest,b=w&&w.prototype,E=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:w,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,O={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1215.min.js"},T=w&&b&&b[y]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:T,userAgent:s,disabled:E};if(!E){t(1),t(7),g[y]?(g[y]("DOMContentLoaded",o,l(!1)),m[y]("load",r,l(!1))):(g[h]("onreadystatechange",i),m[h]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var P=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(11),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<link rel="canonical" href="internet-freedom" />
+<link rel="image_src" href="https://freedomhouse.org/sites/default/files/styles/1380x450_fp_and_crop_/public/2020-02/shutterstock_167012954.jpg?h=aac3f050&amp;itok=1vGeVuyX" />
+<meta name="description" content="The future of privacy, free expression, and democratic governance rests on the decisions we make today. Explore Freedom House&#039;s detailed recommendations for action below." />
+<meta property="og:site_name" content="Freedom House" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://freedomhouse.org/policy-recommendations/internet-freedom" />
+<meta property="og:title" content="Policy Recommendations: Internet Freedom" />
+<meta property="og:description" content="The future of privacy, free expression, and democratic governance rests on the decisions we make today. Explore Freedom House&#039;s detailed recommendations for action below." />
+<meta property="og:image" content="https://freedomhouse.org/sites/default/files/styles/1380x450_fp_and_crop_/public/2020-02/shutterstock_167012954.jpg?h=aac3f050&amp;itok=1vGeVuyX" />
+<meta property="og:image:width" content="1380" />
+<meta property="og:image:height" content="450" />
+<meta property="og:image:alt" content="FOTN 2017 iPad Police Photo" />
+<meta name="google-site-verification" content="" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@freedomhouse" />
+<meta name="twitter:description" content="The future of privacy, free expression, and democratic governance rests on the decisions we make today. Explore Freedom House&#039;s detailed recommendations for action below." />
+<meta name="twitter:title" content="Policy Recommendations: Internet Freedom" />
+<meta name="twitter:site:id" content="18270066" />
+<meta name="twitter:creator" content="@freedomhouse" />
+<meta name="twitter:creator:id" content="18270066" />
+<meta name="twitter:url" content="https://freedomhouse.org/policy-recommendations/internet-freedom" />
+<meta name="twitter:image:alt" content="FOTN 2017 iPad Police Photo" />
+<meta name="twitter:image:height" content="450" />
+<meta name="twitter:image:width" content="1380" />
+<meta name="twitter:image" content="https://freedomhouse.org/sites/default/files/styles/1380x450_fp_and_crop_/public/2020-02/shutterstock_167012954.jpg?h=aac3f050&amp;itok=1vGeVuyX" />
+<meta name="Generator" content="Drupal 9 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Report",
+            "headline": "Policy Recommendations: Internet Freedom",
+            "name": "Policy Recommendations: Internet Freedom",
+            "about": [
+                "The future of privacy",
+                "free expression",
+                "and democratic governance rests on the decisions we make today. Explore Freedom House\u0026#039;s detailed recommendations for action below."
+            ],
+            "description": "The future of privacy, free expression, and democratic governance rests on the decisions we make today. Explore Freedom House\u0026#039;s detailed recommendations for action below.",
+            "image": {
+                "@type": "ImageObject",
+                "url": "https://freedomhouse.org/sites/default/files/styles/1380x450_fp_and_crop_/public/2020-02/shutterstock_167012954.jpg?h=aac3f050\u0026itok=1vGeVuyX"
+            },
+            "datePublished": "Wed, 10/02/2019 - 18:44",
+            "dateModified": "Mon, 09/20/2021 - 22:50",
+            "isAccessibleForFree": "True",
+            "author": {
+                "@type": "Organization",
+                "@id": "https://freedomhouse.org/",
+                "name": "Freedom House",
+                "url": "https://freedomhouse.org/"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "@id": "https://freedomhouse.org/",
+                "name": "Freedom House",
+                "url": "https://freedomhouse.org/"
+            },
+            "mainEntityOfPage": "https://freedomhouse.org/policy-recommendations/internet-freedom"
+        }
+    ]
+}</script>
+<link rel="icon" href="https://freedomhouse.org/themes/custom/ts_freedomhouse/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="alternate" hreflang="en" href="internet-freedom" />
+<script src="https://freedomhouse.org/sites/default/files/google_tag/fotn_2019/google_tag.script.js?r7sfst" defer></script>
+
+    <title>Policy Recommendations: Internet Freedom | Freedom House</title>
+    <link rel="stylesheet" media="all" href="https://freedomhouse.org/sites/default/files/css/css_d-5-EGyaoOgR_8Rcph3at3hj0nvWnm_nTKFB4HZ3TZE.css" />
+<link rel="stylesheet" media="all" href="https://freedomhouse.org/sites/default/files/css/css_juzM5gJxeUIrkYtiH26xjmMDn7UvgyG3M7-UcxrugJc.css" />
+
+    <link rel="stylesheet" href="https://use.typekit.net/ydk7xlb.css">
+    
+  </head>
+  <body class="path-node page-node-type-page">
+    <!-- Grid Layout Checker -->
+        <!-- END Grid Layout Checker -->
+
+    <a href="internet-freedom#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+
+    <div id="accessibility-url">
+      <a href="https://freedomhouse.org/accessibility" class="visually-hidden focusable skip-link">
+		    Accessibility
+      </a>
+    </div>
+
+    <noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MDVVC3S&gtm_auth=3S_-G9VkAiUNDDX1WIo-Mg&gtm_preview=env-2&gtm_cookies_win=x" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+      <header id="page-header">
+    <div class="language-switcher-language-url block block-language block-language-blocklanguage-interface" id="block-languageswitcher" role="navigation" data-block-plugin-id="language_block:language_interface">
+  
+    
+      
+  </div>
+
+    <div class="container">
+      <div class="top-row content-side-padding">
+        <div class="site-logo">
+          <a href="https://freedomhouse.org/"><img src="https://freedomhouse.org/themes/custom/ts_freedomhouse/logo.svg" alt="Freedom House Logo - Torch next to words Freedom House"/></a>
+        </div>
+        <nav role="navigation" aria-labelledby="block-primarynavigation-menu" id="block-primarynavigation" data-block-plugin-id="system_menu_block:primary-navigation" class="block block-menu navigation menu--primary-navigation">
+            
+  <h2 class="visually-hidden" id="block-primarynavigation-menu">Primary Navigation</h2>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="https://freedomhouse.org/issues" data-drupal-link-system-path="node/351">Our Issues</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/countries/freedom-world/scores" data-drupal-link-system-path="node/183">Countries</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/policy-recommendations" data-drupal-link-system-path="node/352">Policy Recommendations</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/explore-the-map" data-drupal-link-system-path="node/178">Explore the Map</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+        <div class="main-nav__right">
+          <div class="donate-button">
+            <button class="button blue" onclick="window.location.href = 'https://connect.clickandpledge.com/w/Form/92f91bca-eaff-4b66-b0ec-f7c5432ad3b7'">Donate</button>
+          </div>
+
+          <button class="menu-toggle" aria-label="Open mobile menu" title="Menu Toggle">
+            <div class="ts-menu-toggle-wrapper">
+              <span></span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="mega-menu mobile-menu-target">
+      <span class="hr"></span>
+      <div class="grid">
+        <div class="mega-menu__left">
+                    <div class="mega-custom-block">Expanding Freedom and Democracy.</div>
+          <nav role="navigation" aria-labelledby="block-quicklinks-menu" id="block-quicklinks" data-block-plugin-id="system_menu_block:quicklinks" class="block block-menu navigation menu--quicklinks">
+      
+  <h2 id="block-quicklinks-menu">Quicklinks</h2>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="https://freedomhouse.org/events" data-drupal-link-system-path="node/344">Events</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/news-perspectives" data-drupal-link-system-path="node/2120">News &amp; Perspectives</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/countries/freedom-world/scores" data-drupal-link-system-path="node/183">Find A Country</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/explore-the-map" data-drupal-link-system-path="node/178">Explore The Map</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/about-us/careers" data-drupal-link-system-path="node/340">Careers</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+          <div class="hr mobile"></div>
+        </div>
+        <nav role="navigation" aria-labelledby="block-megamenu-menu" id="block-megamenu" data-block-plugin-id="system_menu_block:mega-menu" class="block block-menu navigation menu--mega-menu">
+            
+  <h2 class="visually-hidden" id="block-megamenu-menu">Mega Menu</h2>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item menu-item--expanded">
+        <a href="https://freedomhouse.org/issues" data-drupal-link-system-path="node/351">Our Issues</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="https://freedomhouse.org/issues/authoritarian-reach" data-drupal-link-system-path="taxonomy/term/63">Authoritarian Reach</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/issues/technology-democracy" data-drupal-link-system-path="taxonomy/term/62">Technology &amp; Democracy</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/issues/promoting-us-leadership" data-drupal-link-system-path="taxonomy/term/64">Promoting U.S. Leadership</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/issues/democracies-decline" data-drupal-link-system-path="taxonomy/term/59">Democracies in Decline</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/issues/election-integrity" data-drupal-link-system-path="taxonomy/term/53">Election Integrity</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/issues/equality-human-rights" data-drupal-link-system-path="taxonomy/term/54">Equality &amp; Human Rights</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/issues/government-accountability-transparency" data-drupal-link-system-path="taxonomy/term/61">Government Accountability &amp; Transparency</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/issues/strengthening-civil-society" data-drupal-link-system-path="taxonomy/term/55">Strengthening Civil Society</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/issues/media-freedom" data-drupal-link-system-path="taxonomy/term/58">Media Freedom</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/issues/religious-freedom" data-drupal-link-system-path="taxonomy/term/60">Religious Freedom</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/issues/freedom-expression" data-drupal-link-system-path="taxonomy/term/57">Freedom of Expression</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/issues/freedom-assembly" data-drupal-link-system-path="taxonomy/term/56">Freedom of Assembly</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/issues/democracy-during-pandemic" data-drupal-link-system-path="taxonomy/term/132">Democracy During Pandemic</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="https://freedomhouse.org/programs/regional" data-drupal-link-system-path="node/447">Programs</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="https://freedomhouse.org/programs/regional" data-drupal-link-system-path="node/447">Regional Programs</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/programs/emergency-assistance-and-thematic-programs" data-drupal-link-system-path="node/464">Emergency Assistance and Thematic Programs</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/countries/freedom-world/scores" data-drupal-link-system-path="node/183">Countries</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/policy-recommendations" data-drupal-link-system-path="node/352">Policy Recommendations</a>
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="https://freedomhouse.org/reports" data-drupal-link-system-path="node/387">Reports</a>
+                                <ul class="menu">
+                    <li class="menu-item menu-item--collapsed">
+        <a href="https://freedomhouse.org/report/freedom-world" data-drupal-link-system-path="taxonomy/term/51">Freedom in the World</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="https://freedomhouse.org/report/freedom-net" data-drupal-link-system-path="taxonomy/term/42">Freedom on the Net</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="https://freedomhouse.org/report/nations-transit" data-drupal-link-system-path="taxonomy/term/50">Nations in Transit</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/report/china-media-bulletin" data-drupal-link-system-path="taxonomy/term/52">China Media Bulletin</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/report/election-watch-digital-age" data-drupal-link-system-path="node/3706">Election Watch for the Digital Age</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/report/transnational-repression" data-drupal-link-system-path="node/3884">Transnational Repression</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/reports/special-reports" data-drupal-link-system-path="node/518">Special Reports</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/reports/publication-archives" data-drupal-link-system-path="node/488">Archives</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="https://freedomhouse.org/news-perspectives" data-drupal-link-system-path="node/2120">News &amp; Perspectives</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="https://freedomhouse.org/news-perspectives/press-releases-statements" data-drupal-link-system-path="node/2121">Press Releases &amp; Statements</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/news-perspectives/manage-subscriptions" data-drupal-link-system-path="node/2123">Manage Subscriptions</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/news-perspectives/explore-newsletters" data-drupal-link-system-path="node/3249">Explore Newsletters</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="https://freedomhouse.org/about-us" data-drupal-link-system-path="node/337">About Us</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="https://freedomhouse.org/about-us/our-history" data-drupal-link-system-path="node/343">History</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/about-us/our-experts" data-drupal-link-system-path="node/342">Our Experts</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/events" data-drupal-link-system-path="node/344">Events</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/about-us/board-leadership" data-drupal-link-system-path="node/338">Board and Leadership</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/ways-to-give" data-drupal-link-system-path="node/3814">Ways to Give</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/about-us/financials" data-drupal-link-system-path="node/345">Financials</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/about-us/careers" data-drupal-link-system-path="node/340">Careers</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/about-us/contact-us" data-drupal-link-system-path="node/346">Contact Us</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+      </div>
+      <div class="mega-menu-bottom">
+      </div>
+    </div>
+  </header>
+
+  <div  class="region region-content" id="main-content" role="main">
+  <div data-drupal-messages-fallback class="hidden"></div>
+<div id="block-ts-freedomhouse-content" data-block-plugin-id="system_main_block" class="block block-system block-system-main-block">
+  
+    
+      
+  
+  
+        
+<div class="node node--type-page node--view-mode-full ds-1col clearfix share-buttons-on">
+
+
+        
+  
+
+
+
+        
+  <div class="field field--name-field-header field--type-entity-reference-revisions field--label-hidden basic-page-header-field field__item">  
+
+            <div class="paragraph paragraph--type--basic-header paragraph--view-mode--default">
+        
+            <div class="field field--name-field-image field--type-entity-reference field--label-hidden field__item"><article class="media media--type-image media--view-mode-basic-hero">
+  
+      
+            <div class="field field--name-image field--type-image field--label-hidden field__item">  <img src="https://freedomhouse.org/sites/default/files/2020-02/shutterstock_167012954.jpg" width="3184" height="2120" alt="FOTN 2017 iPad Police Photo" loading="lazy" typeof="foaf:Image" />
+
+</div>
+      
+  </article>
+</div>
+      
+        <div class="grid basic-header-grid">
+          <div class="basic-header-text-wrapper">
+            <div class="basic-header-text-flex">
+                              <div class="card-title">
+                                      
+                    
+                                  </div>
+                            <h1 class="basic-h1">Policy Recommendations: Internet Freedom</h1>
+              
+            </div>
+          </div>
+        </div>
+        <div class="basic-header-image-overlay"></div>
+      </div>
+            </div>
+
+  <div class="share-buttons-wrapper grid">
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+  <div class="share-buttons addthis_toolbox addthis_default_style addthis_32x32_style">
+    <a class="addthis_button_facebook" href="internet-freedom" aria-label="Share this page on Facebook"><span></span></a>
+    <a class="addthis_button_twitter" href="internet-freedom" aria-label="Share this page on Twitter"><span></span></a>
+    <a class="addthis_button_email" href="internet-freedom" aria-label="Share this page via email" target="_blank"><span></span></a>
+      </div>
+
+  </div>
+
+  <div class="grid intro-text-paragraph friendly-block">
+    <div class="field field--name-field-intro field--type-text-with-summary field--label-hidden field__item intro-text"><p>The future of privacy, free expression, and democratic governance rests on the decisions we make today. Explore Freedom House's detailed recommendations for action below.</p>
+</div>
+  </div>
+
+      <div class="field field--name-field-page-blocks field--type-entity-reference-revisions field--label-hidden page blocks field__items">
+      <span class='hr'></span>
+              <span class="hr"></span>
+  <div class="paragraph paragraph--type--image-plus-text paragraph--view-mode--default unfriendly-block">
+    <div class='grid'>
+          
+            <div class="field field--name-field-image field--type-entity-reference field--label-hidden field__item"><article class="media media--type-image media--view-mode-_-up-card">
+  
+      
+            <div class="field field--name-image field--type-image field--label-hidden field__item">    <picture>
+                  <source srcset="/sites/default/files/styles/650x382_fp_scale_crop_/public/2021-09/FINAL_FOTN_2021_Cover_Illustration_Resized.jpg?h=6987d0c3&amp;itok=fN1QCUBR 1x" media="(min-width: 1441px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/650x382_fp_scale_crop_/public/2021-09/FINAL_FOTN_2021_Cover_Illustration_Resized.jpg?h=6987d0c3&amp;itok=fN1QCUBR 1x" media="(min-width: 992px) and (max-width: 1440px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/650x382_fp_scale_crop_/public/2021-09/FINAL_FOTN_2021_Cover_Illustration_Resized.jpg?h=6987d0c3&amp;itok=fN1QCUBR 1x" media="(min-width: 768px) and (max-width: 991px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/420x250_fp_scale_crop_/public/2021-09/FINAL_FOTN_2021_Cover_Illustration_Resized.jpg?h=6987d0c3&amp;itok=ts9wtGCI 1x" media="(min-width: 401px) and (max-width: 767px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/308x182_fp_scale_crop_/public/2021-09/FINAL_FOTN_2021_Cover_Illustration_Resized.jpg?h=6987d0c3&amp;itok=L-wfIFLy 1x" media="(min-width: 0px) and (max-width: 400px)" type="image/jpeg"/>
+                  <img src="https://freedomhouse.org/sites/default/files/styles/308x182_fp_scale_crop_/public/2021-09/FINAL_FOTN_2021_Cover_Illustration_Resized.jpg?h=6987d0c3&amp;itok=L-wfIFLy" alt="In the high-stakes battle between states and technology companies, the rights of internet users have become the main casualties. Illustration by Mitch Blunt" typeof="foaf:Image" />
+
+  </picture>
+
+</div>
+      
+  </article>
+</div>
+      
+      <div class="one-up-cta-card-wrapper">
+                <h2 class="field field--name-field-header field--type-string field--label-hidden field__item default-header">Recommendations from Freedom on the Net 2021</h2>
+    
+        <span class="one-up-cta-text">
+            <div class="clearfix text-formatted field field--name-field-text field--type-text-with-summary field--label-hidden field__item"><p><span><span><span><span><span>Global internet freedom declined for the <strong>11th consecutive year</strong> in 2021. See what policymakers, companies, and civil society can do to help.</span></span></span></span></span></p></div>
+      </span>
+        
+  <div class="field field--name-field-link-single field--type-link field--label-above field__item">
+    <a href="https://freedomhouse.org/report/freedom-net/2021/global-drive-control-big-tech/policy-recommendations" class="large-button button blue chevron-right one-up-cta-button">
+      Learn More
+    </a>
+  </div>
+
+      </div>
+        </div>
+  </div>
+<span class="hr"></span>
+
+
+                <div class="lovey-block text-paragraph ">
+    <div class="paragraph paragraph--type--text paragraph--view-mode--default grid">
+              
+            <div class="clearfix text-formatted field field--name-field-text field--type-text-with-summary field--label-hidden field__item"><h2><span><span><span><span><strong><span><span><span><span>Protecting </span></span></span></span></strong><strong><span><span><span>and Promoting <span>Internet Freedom</span></span></span></span></strong></span></span></span></span></h2>
+
+<h3><em><span><span><span><span><span><span><span>For Policymakers</span></span></span></span></span></span></span></em></h3>
+
+<p><span><span><span><span><strong><span><span>Reject undue restrictions on access to information and free expression, especially during a pandemic.</span></span></strong><span><span> Governments should support and maintain access to the internet and refrain from banning social media and messaging platforms. While such services may present genuine societal and national security concerns, bans constitute an arbitrary and disproportionate response that unduly restricts users’ cultural, social, and political speech. Governments should address any legitimate human rights or other risks posed by such services through standard democratic mechanisms, including legislation passed in consultation with civil society experts and affected stakeholders, rather than resorting to national security orders and emergency measures.</span></span></span></span></span></span></p>
+
+<p><span><span><span><strong><span>Take action to address the digital divide</span></strong><strong><span>.</span></strong><span> With jobs and schooling moving online as a result of COVID-19, the repercussions of unequal access to the internet are worsening. In the short term, governments should work with service providers to lift data caps and waive fees for late payments; they should also support community-based initiatives to provide secure public access points and to lend electronic devices to individuals who need them. Longer-term efforts could include expanding access and building internet infrastructure for underserved areas and populations, ensuring that connectivity is affordable regardless of income level, and enacting strong legal protections for user privacy and net neutrality.</span></span></span></span></p>
+
+<p><span><span><span><strong>Bolster cyber diplomacy in defense of an open, free, and global internet. </strong>Diplomats should make greater efforts to push back against data localization requirements around the world, particularly in repressive countries where the human rights implications for local users are stark. In the United States, the proposed Cyber Diplomacy Act (H.R.739) would establish an Office of International Cyberspace Policy within the State Department, headed by an ambassador for cyberspace, to lead cyber diplomacy efforts. The office would be tasked with implementing a US international cyber policy that advances democratic principles and promotes an open, interoperable, and secure internet governed by a multistakeholder model. The legislation requires the inclusion of internet freedom in annual State Department country assessments and the formulation of a strategy for engaging foreign governments to develop international norms of responsible state behavior on cyber issues.</span></span></span></p>
+
+<p><span><span><span><strong>Lead by example. </strong>Freedom House research consistently shows that governments learn from one another, copying restrictive policies and actions from foreign states to implement at home. This includes less free governments that cite the actions of democracies to justify their own repressive policies. Democratic leaders should demonstrate respect for internet freedom principles by adhering to domestic legislation in line with international human rights laws and standards, and by refraining from rhetoric that undermines these standards.</span></span></span></p>
+
+<p><span><span><span><span><strong><span>Preserve broad protections against intermediary liability. </span></strong><span>Companies should continue to benefit from safe-harbor protections for most user-generated and third-party content appearing on their platforms, in keeping with principles that have allowed for a historic blossoming of artistic expression, economic activity, and social campaigning. Policies ostensibly meant to enforce political neutrality would in practice open the door to politicized government interference and negatively impact “good Samaritan” rules that enable companies to moderate harmful content without fear of unfair legal consequences. In line with the Manila Principles, governments should work together with technical, legal, and human rights experts to establish meaningful oversight measures for technology companies, including the ability to evaluate their content moderation practices for transparency, proportionality, and the effectiveness of appeals processes.</span></span></span></span></span></p>
+
+<p><span><span><span><span><strong><span><span><span>Ensure that all internet-related laws and practices adhere to international human rights law and standards. </span></span></span></strong><span><span><span>National governments should establish periodic reviews to assess whether their laws and practices regarding internet freedom conform to the principles outlined in the Universal Declaration of Human Rights and the International Covenant on Civil and Political Rights. Any undue restrictions on internet freedom—including the blocking of political websites, internet shutdowns, arrests for nonviolent speech, or extralegal surveillance—should cease immediately.</span></span></span></span></span></span></span></p>
+
+<h3><em><span><span><span><span><span><span><span>For the Private Sector</span></span></span></span></span></span></span></em></h3>
+
+<p><span><span><span><span><strong><span>Ensure fair and transparent content moderation. </span></strong><span>To accomplish this, p</span><span>rivate companies should do the following:               </span></span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span><span>Prioritize users’ free expression and access to information, particularly for content that can be considered journalism, discussion of human rights, educational materials, or political, social, cultural, religious, and artistic expression.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Clearly and concretely define in their guidelines and terms of service what speech is not permissible, what aims such restrictions serve, and how the company assesses content. </span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>When appropriate, consider less invasive alternatives to content removal, such as labeling, fact-checking, adding context, and design changes that grant users more control over their information digest. </span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Ensure that content removal requests from governments are in compliance with international human rights standards and use all available channels to push back against problematic requests.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Publish detailed transparency reports on content takedowns—both for those initiated by governments and for those undertaken by the companies themselves.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Provide an efficient and timely avenue of appeal for users who believe that their rights were unduly restricted, including through censorship, banning, assignment of labels, or demonetization of posts.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span>Refrain from relying on automated systems for flagging and removing content without a meaningful opportunity for human review.</span></span></span></span></span></li>
+</ul>
+
+<p><span><span><span><strong><span>Resist government orders to shut down internet connectivity or ban digital services. </span></strong><span>Service providers should use all available legal channels to push back on such requests from state agencies, whether they are official or informal</span><span>. If companies cannot resist demands in full, they should ensure that any restrictions or disruptions are as limited as possible in duration, geographic scope, and the type of content affected. Companies should also thoroughly document government demands internally, and notify users as to why connectivity or content may be restricted, especially in countries where government actions lack transparency.</span></span></span></span></p>
+
+<p><span><span><span><span><strong>Adhere to the UN Guiding Principles on Business and Human Rights and conduct human rights impact assessments for new markets, with a commitment to do no harm.</strong> Companies should commit to respecting the rights of their users and addressing any adverse impact that their products might have on human rights. Companies should not build tools that prevent individuals from exercising their right to free expression, turn user data over to governments with poor human rights records, or provide surveillance or law enforcement equipment that is likely to be used to commit human rights violations. International companies should not seek to operate in countries where they know they will be forced to violate international human rights principles. Where companies do operate, they should conduct periodic assessments to fully understand how their products and actions might affect rights like freedom of expression or privacy. When a product is found to have been used for human rights violations, companies should suspend sales to the perpetrating party and develop an immediate action plan to mitigate harm and prevent further abuse.</span></span></span></span></p>
+
+<p><span><span><span><strong>Engage in continuous dialogue with civil society organizations to understand the implications of company policies and products.</strong> Companies should seek out local expertise on the political and cultural context in markets where they have a presence or where their products are widely used. These consultations with civil society groups should inform the companies’ approach to content moderation, managing government requests, and countering disinformation, among other activities.</span></span></span></p>
+
+<h3><em><span><span><span><span><span><span><span>For Civil Society</span></span></span></span></span></span></span></em></h3>
+
+<p class="MsoCommentText"><span><span><strong><span>Conduct research on and raise awareness about censorship and content manipulation. </span></strong><span>Civil society groups should engage in innovative initiatives that inform the public about government censorship, as well as investigate and expose disinformation campaigns, including their origins and objectives. Studies and surveys have shown that when users become more aware of censorship and disinformation, they often take actions that enhance internet freedom and protect fellow users.</span></span></span></p>
+
+<p><span><span><span><strong><span>Utilize strategic litigation to push back against shutdowns and censorship. </span></strong><span>Civil society groups and their allies have won victories in court that reversed network shutdowns and censorship decisions in </span><span>Indonesia, India, Pakistan, Sudan, Togo, and Zimbabwe. They </span>should participate in strategic litigation whenever possible, or provide friend-of-the-court filings that explain how certain forms or uses of digital technology undermine human rights.<span> Civil society organizations should consider carefully whether to bring cases against governments themselves or support others seeking to do so, given that the process can be complicated and costly.</span></span></span></span></p>
+
+<p><span><span><span><strong><span>Build digital literacy among the public. </span></strong><span>Civil society organizations should educate netizens about how to spot disinformation and misinformation on social media, addressing topics such as altered content, so-called deepfake videos, suspicious spelling or phrasing, and inadequate citation. Organizations should also inform internet users about how to report false or suspicious content and how to flag this content for friends and family.</span></span></span></span></p>
+
+<p><span><span><span><strong>Work together with policymakers and the private sector to design and champion effective solutions. </strong>Some of the most important advances in privacy and free expression—such as the widespread adoption of end-to-end encryption or HTTPS browsing—derive from innovations in technical standards and product design that were effectively pushed by advocacy groups. Multistakeholder efforts will be needed to ensure that leading democracies can offer a viable alternative to the authoritarian model of cyber sovereignty.</span></span></span></p>
+
+<p><span><span><span><span><strong><span><span><span>Continue to raise awareness about government censorship and surveillance efforts. </span></span></span></strong><span><span><span>Civil society groups globally should engage in innovative initiatives that inform the public about government censorship and surveillance, imprisoned journalists and online activists, and best practices for protecting internet freedom, particularly in the lead-up to elections, when internet freedom violations are most acute. Studies and surveys have shown that when users become more aware of censorship, they often take actions that enhance internet freedom and protect fellow users.</span></span></span></span></span></span></span></p></div>
+      
+          </div>
+  </div>
+
+                <div class="lovey-block text-paragraph ">
+    <div class="paragraph paragraph--type--text paragraph--view-mode--default grid">
+              
+            <div class="clearfix text-formatted field field--name-field-text field--type-text-with-summary field--label-hidden field__item"><hr />
+<h2 class="big-body-text" dir="ltr"><span><span><span><strong><span><span><span>Protecting Human Rights from Intrusive Surveillance</span></span></span></strong></span></span></span></h2>
+
+<h3><em><span><span><span><span><span>For Policymakers</span></span></span></span></span></em></h3>
+
+<p><span><span><span><strong>Ensure that new surveillance programs meet international human rights standards for necessity, proportionality, and independent oversight. </strong>New surveillance programs meant to help combat COVID-19 must first be shown to be necessary—in the view of public health experts—for containing the spread of the virus. Any program should also be narrowly tailored, minimizing what information is collected, who collects it, and how it can be used. Any sharing of data must be transparent and subject to independent review. The information collected should be firewalled from other uses and generally destroyed after the virus is brought under control, so that authorities and private companies cannot access it later for political, law enforcement, or commercial purposes. Any programs involving the use of smartphone apps should be voluntary, with no participation requirements for access to public services.</span></span></span></p>
+
+<p><span><span><span><strong>Enact robust data privacy legislation and protect encryption.</strong> In the United States, policymakers should pass a federal electronic privacy law that provides robust data protections and harmonizes rules among the 50 states. They should also resist legislative attempts to undermine encrypted services, including through the use of “back doors.” Individuals should have control over their information and the right to access it, delete it, and transfer it to the providers of their choosing. Governments should have the ability to access personal data only in limited circumstances as prescribed by law, subject to judicial authorization, and within a specific time frame. Companies should also be required to disclose in nontechnical language how they use customer data, details on third parties that have access to the data, and how third parties are allowed to use the data. Companies should also be required to notify customers in a timely fashion if their information is compromised. Given the technical measures—including cyberattacks—that both foreign and domestic actors use to access citizens’ personal information, data privacy legislation should be paired with cybersecurity requirements concerning the collection and storage of user data.</span></span></span></p>
+
+<p><span><span><span><strong>Firmly restrict new surveillance technologies that employ biometrics and artificial intelligence.</strong> Lawmakers should pass a moratorium on the use of facial- and other affect-recognition technologies in sensitive areas such as law enforcement, education, employment, health care, and housing, and future legislation governing these technologies should be informed by additional research on their potential harms to human rights. State and local governments should follow the lead of municipalities in California, Oregon, Massachusetts, and other US states that have passed moratoria or bans on the use of biometric and AI surveillance.</span></span></span></p>
+
+<p><span><span><span><strong>Improve oversight of and create alternatives to algorithmic decision-making. </strong>Governments should be explicit about how, when, where, and why they use automated systems. Procurement processes for such technology should be transparent and include human rights–based impact assessments. Government agencies should create pathways to ensure human oversight and explanation, especially when algorithmic decision-making determines access to public services like education, health care, and housing. Automated systems should be routinely audited to ensure that they comply with antidiscrimination laws and other rights-based standards. Furthermore, governments should establish mechanisms for appeal and redress in cases of discrimination by algorithm.</span></span></span></p>
+
+<p><span><span><span><strong>Restrict the export of censorship and surveillance technology. </strong>Given the significant potential for abuse, trade in censorship and surveillance technologies should be restricted, particularly for end users that are known to have committed human rights violations. The United States is currently updating export control requirements for emerging technologies, foundational technologies, and items used in crime control and detection. Any final rule issued by the US government should ensure that technologies enabling monitoring, surveillance, and the interception or collection of information and communications—including systems that use machine learning, natural language processing, and deep learning—are included on the Commerce Control List and cannot be sold to countries rated Partly Free or Not Free by any Freedom House publication.</span></span></span></p>
+
+<p><span><span><span><span><strong><span><span><span>Require businesses exporting dual-use technologies to report annually on the impacts of their exports. </span></span></span></strong><span><span><span>Reports should include a list of countries to which they have exported such technologies, potential human rights concerns in each of those countries, a summary of pre-export due diligence undertaken by businesses to ensure their products are not misused, any human rights violations that have occurred as a result of the use or potential use of their technologies, and any efforts undertaken to mitigate the harm done and prevent future abuses. Further, any official government export guidance should urge businesses to exercise caution and adhere to international principles on business and human rights when exporting dual-use technologies to countries rated Partly Free or Not Free by Freedom House.</span></span></span></span></span></span></span></p>
+
+<p><span><span><span><span><strong><span><span><span>Strictly regulate the use of social media surveillance tools and the collection of social media information by government agencies and law enforcement.</span></span></span></strong><span><span><span> To maintain democratic standards, any social media surveillance program employed by government or law enforcement must occur under stringent oversight and operate with transparency, including through sustained dialogue with local communities. Social media surveillance should not be used to proactively monitor peaceful protests or individuals’ involvement in nonviolent political groups. Government agencies should not conduct blanket collection of social media data as part of immigration or visa evaluations. Given the technical limitations and known inaccuracy rates of such technology, relevant oversight agencies should conduct human rights audits of the tools themselves and their use, and release their results to the public. They should further be empowered to impose penalties, and require that those harmed be granted remedy.</span></span></span></span></span></span></span></p>
+
+<h3><em><span><span><span><span><span>For the Private Sector</span></span></span></span></span></em></h3>
+
+<p><span><span><span><strong>Design public health apps with privacy and security in mind. </strong>Software developers should build privacy and security considerations into the architecture of any new tool. From the start, clear nontechnical language should inform users about what personal information is used, how it is stored, and with whom it is shared. Users should have the opportunity to explicitly consent to the collection of data, especially when the information is not strictly necessary for the application’s core public health function. Developers should make their platforms available for third-party privacy and security audits and include opportunities for effective petition and redress for abuses. In addition, companies should avoid working with governments and private actors that perpetrate or facilitate human rights abuses.</span></span></span></p>
+
+<p><span><span><span><span><strong><span><span><span>Limit the ability of government authorities and law enforcement to conduct blanket social media surveillance.</span></span></span></strong><span><span><span> To the extent possible, social media companies should proactively assess and publicly disclose the different actors that can access their data through APIs (application programming interfaces) and large databases of semipublic data. Greater transparency around social media surveillance practices can help inform improved oversight and accountability mechanisms that can prevent instances where social media data is used to violate fundamental rights. Companies should also disclose and conduct due diligence on any existing and future partnerships with third parties to ensure they are not providing user information to companies that sell the data to governments of countries rated Partly Free or Not Free by Freedom House.</span></span></span></span></span></span></span></p>
+
+<p><span><span><span><span><strong><span><span><span>Grant users control over their information and ensure that it is not being misused. </span></span></span></strong><span><span><span>Individuals should have the ability to see what personal data companies are collecting about them and how the data is used, as well as the ability to easily turn off data collection and tracking features. Companies also need to ensure that user data is not being used or shared in ways that customers have not explicitly authorized.</span></span></span></span></span></span></span></p>
+
+<p><span><span><span><span><strong><span><span><span>Train technologists and engineers on the human rights implications of the products they are building and on international best practices for preventing their abuse. </span></span></span></strong><span><span><span>It is imperative that those building new technologies understand the ways in which the technologies can be abused or manipulated. As part of this effort, companies should conduct periodic assessments to fully understand how their products and actions might affect rights like freedom of expression or privacy. Upon completion of these assessments, companies should develop actionable plans to remedy any evident or potential harm.</span></span></span></span></span></span></span></p>
+
+<h3><em><span><span><span><span><span>For Civil Society</span></span></span></span></span></em></h3>
+
+<p class="MsoCommentText"><span><span><strong><span>Conduct research on and raise awareness of intrusive new surveillance technologies. </span></strong><span>Civil society groups should engage in innovative initiatives that inform the public about the privacy and other human rights harms wrought by unchecked state and corporate data collection. Watchdog groups should engage in technical analysis to determine the human rights risks posed by smartphone apps, biometric surveillance, and other emerging technologies.</span></span></span></p>
+
+<p><span><span><span><span><strong><span>Utilize strategic litigation to push back against state surveillance. </span></strong><span>Civil society groups and their allies have won victories in court that </span><span>limited state surveillance in Brazil, Estonia, Germany, South Africa, and the United States. They should participate in strategic litigation whenever possible, or provide friend-of-the-court filings that explain how digital surveillance can undermine human rights. Civil society organizations should consider carefully whether to bring cases against governments themselves or support others seeking to do so, given that the process can be complicated and costly.</span></span></span></span></span></p></div>
+      
+          </div>
+  </div>
+
+                <div class="lovey-block text-paragraph ">
+    <div class="paragraph paragraph--type--text paragraph--view-mode--default grid">
+              
+            <div class="clearfix text-formatted field field--name-field-text field--type-text-with-summary field--label-hidden field__item"><hr />
+<h2><span><span><span><span><span><span><span><span>Securing Elections</span></span></span></span></span></span></span></span></h2>
+
+<h3><span><span><span><span><em><span><span><span>For Policymakers</span></span></span></em></span></span></span></span></h3>
+
+<p><span><span><span><span><strong><span><span><span>Improve transparency and oversight of online political advertisements. </span></span></span></strong><span><span><span>In the United States, the Honest Ads Act (S.1356/H.R.2592) would modernize existing law by applying disclosure requirements to campaign advertising and requiring large digital platforms to maintain a public file of all electioneering communications that includes a copy of each ad, when it was published, its target audience, the number of views generated, and the contact information of the purchaser. The Honest Ads Act would also require platforms that distribute political ads to make “reasonable efforts” to ensure that they are not being purchased by foreign actors, directly or indirectly.</span></span></span></span></span></span></span></p>
+
+<p><span><span><span><span><strong><span><span><span>Address the use of bots in social media manipulation. </span></span></span></strong><span><span><span>In the United States, the Bot Disclosure and Accountability Act (S.2125) would authorize the Federal Trade Commission to require the conspicuous and public disclosure of bots intended to replicate human activity. The legislation would also prohibit candidates, campaigns, and political organizations from using such bots, particularly to disguise political advertising or otherwise deceive voters by giving false impressions of support from actual users.</span></span></span></span></span></span></span></p>
+
+<p><span><span><span><span><strong><span><span><span>Protect elections from cyberattacks with paper ballots and election audits. </span></span></span></strong><span><span><span>According to the recommendations of the bipartisan report on Russian interference in the 2016 election released by the US Senate Select Committee on Intelligence, paper ballots ensure votes have a verifiable paper trail, while risk-limiting audits help ensure the accuracy of results. In the United States, the Protecting American Votes and Election Act (S.1472/H.R.2754) would mandate the use of paper ballots and audits in federal elections, and provide funding for states to purchase new ballot-scanning machines.</span></span></span></span></span></span></span></p>
+
+<h3><span><span><span><span><em><span><span><span>For the Private Sector</span></span></span></em></span></span></span></span></h3>
+
+<p><span><span><span><span><strong><span><span><span>Develop rapid response teams to address cybersecurity and disinformation incidents around elections. </span></span></span></strong><span><span><span>Ahead of significant elections and referendums in countries around the world, social media companies and other content providers should create specialized teams that anticipate digital interference, and devise strategies to prevent interference tactics and mitigate their effects. When designing and implementing new tools to address cybersecurity and disinformation, companies should communicate openly about what new policies they may be putting in place ahead of elections, and engage with local civil society organizations that can provide expertise on the political and cultural contexts in which companies work.</span></span></span></span></span></span></span></p>
+
+<p><span><span><span><span><strong><span><span><span>Ensure political advertisements are transparent and adhere to strict content standards. </span></span></span></strong><span><span><span>Companies should rigorously vet political advertisements before they are posted on their platforms to ensure legitimate association with domestic actors and compliance with applicable electoral laws. Companies should also clearly identify who has purchased each advertisement.</span></span></span></span></span></span></span></p>
+
+<p><span><span><span><span><strong><span><span><span>Improve information sharing among social media companies and between public and private sectors.</span></span></span></strong><span><span><span> As recommended by the US Senate Select Committee on Intelligence in its bipartisan report on Russia’s use of social media to interfere in the 2016 US election, social media companies should improve and formalize mechanisms that allow them to share information about malicious activity and potential vulnerabilities on their platforms amongst themselves and with governments. This will allow faster and more effective responses to foreign disinformation campaigns and other forms of interference, which often span multiple platforms. Social media users should be notified when they may have been exposed to such foreign activity, and be given information necessary to understand the malicious nature of the content.</span></span></span></span></span></span></span></p>
+
+<h3><span><span><span><span><em><span><span><span>For Civil Society</span></span></span></em></span></span></span></span></h3>
+
+<p><span><span><span><span><strong><span><span><span>Conduct early-warning analysis on election interference tactics likely to occur in a country, and mobilize advocacy campaigns to prevent negative impacts. </span></span></span></strong><span><span><span>Civil society organizations (CSOs) should educate voters about how to spot political disinformation and flag misleading content on social media, particularly on private messaging platforms. Advocacy efforts should place public pressure on governments and telecommunications providers to refrain from blocking online content or restricting network connectivity. CSOs should also engage with election commissions to flag potential interference tactics and develop strategies to mitigate other harms to the electoral process.</span></span></span></span></span></span></span></p></div>
+      
+          </div>
+  </div>
+
+              <span class="hr"></span>
+  <div class="paragraph paragraph--type--_-up-cta paragraph--view-mode--default unfriendly-block">
+          
+<div  class="container">
+      
+<div  class="content-side-padding">
+      
+      <h2 class="field field--name-field-header field--type-string field--label-hidden field__item card-list">More Policy Recommendations</h2>
+  
+  </div>
+
+  </div>
+
+  <div class="field field--name-field-ctas field--type-entity-reference-revisions field--label-hidden grid-wrapper three-up-cards grid">
+          <div class="three-up-card">  <div class="paragraph paragraph--type--image-plus-text paragraph--view-mode--_-up-card">
+                  <a href="strengthening-democracy-abroad" aria-label="Policy Recommendations: Strengthening Democracy" class="three-up-card-link-wrapper">
+                
+            <div class="field field--name-field-image field--type-entity-reference field--label-hidden field__item"><article class="media media--type-image media--view-mode-_-up-card">
+  
+      
+            <div class="field field--name-image field--type-image field--label-hidden field__item">    <picture>
+                  <source srcset="/sites/default/files/styles/340x200_fp_scale_crop_/public/2020-02/policy-recommendations-hong-kong-democracy-act_shutterstock_1475619431.jpg?h=649a3852&amp;itok=9UW_dhaz 1x" media="(min-width: 1441px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/340x200_fp_scale_crop_/public/2020-02/policy-recommendations-hong-kong-democracy-act_shutterstock_1475619431.jpg?h=649a3852&amp;itok=9UW_dhaz 1x" media="(min-width: 992px) and (max-width: 1440px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/340x200_fp_scale_crop_/public/2020-02/policy-recommendations-hong-kong-democracy-act_shutterstock_1475619431.jpg?h=649a3852&amp;itok=9UW_dhaz 1x" media="(min-width: 768px) and (max-width: 991px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/700x260_fp_scale_crop_/public/2020-02/policy-recommendations-hong-kong-democracy-act_shutterstock_1475619431.jpg?h=649a3852&amp;itok=mjimY4ku 1x" media="(min-width: 401px) and (max-width: 767px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/308x182_fp_scale_crop_/public/2020-02/policy-recommendations-hong-kong-democracy-act_shutterstock_1475619431.jpg?h=649a3852&amp;itok=CAoBjlTp 1x" media="(min-width: 0px) and (max-width: 400px)" type="image/jpeg"/>
+                  <img src="https://freedomhouse.org/sites/default/files/styles/308x182_fp_scale_crop_/public/2020-02/policy-recommendations-hong-kong-democracy-act_shutterstock_1475619431.jpg?h=649a3852&amp;itok=CAoBjlTp" alt="hong kong democracy act policy recommendations" typeof="foaf:Image" />
+
+  </picture>
+
+</div>
+      
+  </article>
+</div>
+      
+                  <h3 class="field field--name-field-header field--type-string field--label-hidden field__item card-title">Policy Recommendations: Strengthening Democracy</h3>
+  
+              </a>
+            
+            <div class="clearfix text-formatted field field--name-field-text field--type-text-with-summary field--label-hidden field__item"><p>Neglecting to tie democratic principles to foreign policy, leaves democracies vulnerable to interference from authoritarian regimes, which have increased repression at home and abroad.</p></div>
+      
+      </div>
+</div>
+          <div class="three-up-card">  <div class="paragraph paragraph--type--image-plus-text paragraph--view-mode--_-up-card">
+                  <a href="https://freedomhouse.org/do-not-use-unpublished-policy-recommendations-chinas-global-media-influence" aria-label="Policy Recommendations: China&#039;s Global Media Influence" class="three-up-card-link-wrapper">
+                
+            <div class="field field--name-field-image field--type-entity-reference field--label-hidden field__item"><article class="media media--type-image media--view-mode-_-up-card">
+  
+      
+            <div class="field field--name-image field--type-image field--label-hidden field__item">    <picture>
+                  <source srcset="/sites/default/files/styles/340x200_fp_scale_crop_/public/field/image/pr_photo_01152020_china_global_megaphone.jpg?h=83d219ae&amp;itok=wlioUZuq 1x" media="(min-width: 1441px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/340x200_fp_scale_crop_/public/field/image/pr_photo_01152020_china_global_megaphone.jpg?h=83d219ae&amp;itok=wlioUZuq 1x" media="(min-width: 992px) and (max-width: 1440px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/340x200_fp_scale_crop_/public/field/image/pr_photo_01152020_china_global_megaphone.jpg?h=83d219ae&amp;itok=wlioUZuq 1x" media="(min-width: 768px) and (max-width: 991px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/700x260_fp_scale_crop_/public/field/image/pr_photo_01152020_china_global_megaphone.jpg?h=83d219ae&amp;itok=kjBH5Ekw 1x" media="(min-width: 401px) and (max-width: 767px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/308x182_fp_scale_crop_/public/field/image/pr_photo_01152020_china_global_megaphone.jpg?h=83d219ae&amp;itok=jD2tlCWA 1x" media="(min-width: 0px) and (max-width: 400px)" type="image/jpeg"/>
+                  <img src="https://freedomhouse.org/sites/default/files/styles/308x182_fp_scale_crop_/public/field/image/pr_photo_01152020_china_global_megaphone.jpg?h=83d219ae&amp;itok=jD2tlCWA" alt="" typeof="foaf:Image" />
+
+  </picture>
+
+</div>
+      
+  </article>
+</div>
+      
+                  <h3 class="field field--name-field-header field--type-string field--label-hidden field__item card-title">Policy Recommendations: China&#039;s Global Media Influence</h3>
+  
+              </a>
+            
+            <div class="clearfix text-formatted field field--name-field-text field--type-text-with-summary field--label-hidden field__item"><p>The following recommendations for policymakers in democratic nations could help counter the negative impact of Beijing’s foreign media influence campaigns.</p></div>
+      
+      </div>
+</div>
+          <div class="three-up-card">  <div class="paragraph paragraph--type--image-plus-text paragraph--view-mode--_-up-card">
+                  <a href="https://freedomhouse.org/report/policy-brief/2019/democratic-crisis-hong-kong-recommendations-policymakers" aria-label="Democratic Crisis in Hong Kong: Recommendations for Policymakers" class="three-up-card-link-wrapper">
+                
+            <div class="field field--name-field-image field--type-entity-reference field--label-hidden field__item"><article class="media media--type-image media--view-mode-_-up-card">
+  
+      
+            <div class="field field--name-image field--type-image field--label-hidden field__item">    <picture>
+                  <source srcset="/sites/default/files/styles/340x200_fp_scale_crop_/public/2020-02/08142019_UPDATED_FINAL_Hong_Kong_Democratic_Crisis_Brief.jpg?h=eafd34b6&amp;itok=iGYgYBNJ 1x" media="(min-width: 1441px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/340x200_fp_scale_crop_/public/2020-02/08142019_UPDATED_FINAL_Hong_Kong_Democratic_Crisis_Brief.jpg?h=eafd34b6&amp;itok=iGYgYBNJ 1x" media="(min-width: 992px) and (max-width: 1440px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/340x200_fp_scale_crop_/public/2020-02/08142019_UPDATED_FINAL_Hong_Kong_Democratic_Crisis_Brief.jpg?h=eafd34b6&amp;itok=iGYgYBNJ 1x" media="(min-width: 768px) and (max-width: 991px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/700x260_fp_scale_crop_/public/2020-02/08142019_UPDATED_FINAL_Hong_Kong_Democratic_Crisis_Brief.jpg?h=eafd34b6&amp;itok=ci2dXPKB 1x" media="(min-width: 401px) and (max-width: 767px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/308x182_fp_scale_crop_/public/2020-02/08142019_UPDATED_FINAL_Hong_Kong_Democratic_Crisis_Brief.jpg?h=eafd34b6&amp;itok=QYLeyXwj 1x" media="(min-width: 0px) and (max-width: 400px)" type="image/jpeg"/>
+                  <img src="https://freedomhouse.org/sites/default/files/styles/308x182_fp_scale_crop_/public/2020-02/08142019_UPDATED_FINAL_Hong_Kong_Democratic_Crisis_Brief.jpg?h=eafd34b6&amp;itok=QYLeyXwj" alt="Crowded Hong Kong Street" typeof="foaf:Image" />
+
+  </picture>
+
+</div>
+      
+  </article>
+</div>
+      
+                  <h3 class="field field--name-field-header field--type-string field--label-hidden field__item card-title">Democratic Crisis in Hong Kong: Recommendations for Policymakers</h3>
+  
+              </a>
+            
+            <div class="clearfix text-formatted field field--name-field-text field--type-text-with-summary field--label-hidden field__item"><p>The United States and other democracies must take strong, immediate action to stand with the people of Hong Kong in their defense of democratic values.</p></div>
+      
+      </div>
+</div>
+      </div>
+
+      </div>
+<span class="hr"></span>
+
+          </div>
+  
+    
+</div>
+
+
+  </div>
+
+</div>
+
+
+  <div  class="region region-content-bottom" id="main-content" role="main">
+  <span class="hr"></span>
+<div id="block-newslettersignup" data-block-plugin-id="newsletter_signup" class="block block-frho-common block-newsletter-signup container unfriendly-block">
+  <div class="content-side-padding newsletter-block form-wrapper">
+    
+        
+          <div class="heading-intro-wrapper"><h2 class="inline h3">Be the first to know what's happening.</h2><span class="paragraph--type--text newsletter-intro"><p>Join the Freedom House monthly newsletter</p></span></div><form class="newsletter-signup-form" data-drupal-selector="newsletter-signup-form" action="internet-freedom" method="post" id="newsletter-signup-form" accept-charset="UTF-8">
+  <input data-drupal-selector="edit-lists-subscriptions" type="hidden" name="lists_subscriptions" value="Monthly Newsletter" />
+<div class="js-form-item form-item js-form-type-email form-type-email js-form-item-email form-item-email">
+      <label for="edit-email" class="js-form-required form-required">Email</label>
+        <input data-drupal-selector="edit-email" type="email" id="edit-email" name="email" value="" size="60" maxlength="254" class="form-email required" required="required" aria-required="true" />
+
+        </div>
+<div class="field-wrapper form-item js-form-wrapper form-wrapper" data-drupal-selector="edit-wrapper-field" id="edit-wrapper-field"><span class="button large-button blue chevron-right remove-padding"><input class="button large-button blue subscribe-block-button button js-form-submit form-submit" data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="Subscribe" />
+</span></div>
+<input autocomplete="off" data-drupal-selector="form-7-6kcub9f5od6ohwv7rvzaaby1tefv-kktvgqllnklw" type="hidden" name="form_build_id" value="form-7_6kcUB9F5od6ohWV7rvzaABy1teFv_KktvGqllNklw" />
+<input data-drupal-selector="edit-newsletter-signup-form" type="hidden" name="form_id" value="newsletter_signup_form" />
+<div class="-textfield js-form-wrapper form-wrapper" style="display: none !important;"><div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item- form-item-">
+      <label for="edit-">Leave this field blank</label>
+        <input autocomplete="off" data-drupal-selector="edit-" type="text" id="edit-" value="" size="20" maxlength="128" class="form-text" />
+
+        </div>
+</div>
+
+</form>
+
+      </div>
+</div>
+
+</div>
+
+
+<button class="back-to-top" aria-hidden="true">Top</button>
+
+<footer>
+  <div class="grid">
+    <nav role="navigation" aria-labelledby="block-footermainmenu-menu" id="block-footermainmenu" data-block-plugin-id="system_menu_block:footer-main-menu" class="block block-menu navigation menu--footer-main-menu">
+            
+  <h2 class="visually-hidden" id="block-footermainmenu-menu">Footer Main Menu</h2>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="https://freedomhouse.org/issues" data-drupal-link-system-path="node/351">Our Issues</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/countries/freedom-world/scores" data-drupal-link-system-path="node/183">Countries</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/policy-recommendations" data-drupal-link-system-path="node/352">Policy Recommendations</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/explore-the-map" data-drupal-link-system-path="node/178">Explore the Map</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://connect.clickandpledge.com/w/Form/92f91bca-eaff-4b66-b0ec-f7c5432ad3b7">Donate</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/news-perspectives" data-drupal-link-system-path="node/2120">News &amp; Perspectives</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/reports" data-drupal-link-system-path="node/387">Reports</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/events" data-drupal-link-system-path="node/344">Events</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/about-us" data-drupal-link-system-path="node/337">About</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/about-us/careers" data-drupal-link-system-path="node/340">Careers</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+
+    <div class="footer-address">
+      <h3 class="footer-header">Address</h3>
+      <p>1850 M St. NW Floor 11</br>
+      Washington, DC 20036</p>
+      <a href="tel:(202) 296-5101">(202) 296-5101</a>
+    </div>
+
+    <div class="footer-contact">
+      <h3 class="footer-header">General Inquiries</h3>
+      <a href="https://freedomhouse.org/cdn-cgi/l/email-protection#224b4c444d6244504747464d4f4a4d5751470c4d5045"><span class="__cf_email__" data-cfemail="147d7a727b5472667171707b797c7b6167713a7b6673">[email&#160;protected]</span></a>
+
+      <h3 class="footer-header">Press & Media</h3>
+      <a href="https://freedomhouse.org/cdn-cgi/l/email-protection#b8c8caddcbcbf8decadddddcd7d5d0d7cdcbdd96d7cadf"><span class="__cf_email__" data-cfemail="49393b2c3a3a092f3b2c2c2d262421263c3a2c67263b2e">[email&#160;protected]</span></a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="content-side-padding footer-bottom">
+      <div class="social-menu">
+        <nav role="navigation" aria-labelledby="block-footersocialmenu-menu" id="block-footersocialmenu" data-block-plugin-id="system_menu_block:footer-social-menu" class="block block-menu navigation menu--footer-social-menu">
+            
+  <h2 class="visually-hidden" id="block-footersocialmenu-menu">Footer Social Menu</h2>
+  
+
+        
+    <h3 class="footer-header">Follow</h3>
+            <ul class="menu">
+                    <li class="menu-item">
+          <a href="https://www.facebook.com/FreedomHouseDC/" class="Facebook"><span class="visually-hidden">Facebook</span></a>
+              </li>
+                <li class="menu-item">
+          <a href="https://twitter.com/freedomhouse" class="Twitter"><span class="visually-hidden">Twitter</span></a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+      </div>
+
+      <div class="footer-bottom-right">
+        <nav role="navigation" aria-labelledby="block-footer-menu" id="block-footer" data-block-plugin-id="system_menu_block:footer" class="block block-menu navigation menu--footer">
+            
+  <h2 class="visually-hidden" id="block-footer-menu">Footer</h2>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="https://freedomhouse.org/manage-subscriptions">Manage Subscriptions</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/about-us/contact-us" data-drupal-link-system-path="node/346">Contact Us</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/about-us/privacy-policy" data-drupal-link-system-path="node/353">Privacy Policy</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/about-us/content-permissions" data-drupal-link-system-path="node/354">Content Permissions</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://freedomhouse.org/sitemap.xml" data-drupal-link-system-path="sitemap.xml">Site Map</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+        <span class="copyright">@2022 FreedomHouse</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </div>
+
+    
+    <script data-cfasync="false" src="https://freedomhouse.org/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/180","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"parallax_bg":[{"selector":".report-code-tnr .paragraph--type--full-width-cta","position":"50%","speed":"0.2"}],"ckeditorAccordion":{"accordionStyle":{"collapseAll":1,"keepRowsOpen":0}},"ajaxTrustedUrl":{"form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM":true},"field_group":{"html_element":{"mode":"default","context":"view","settings":{"classes":"content-side-padding","id":"","element":"div","show_label":false,"label_element":"h3","label_element_classes":"","attributes":"","effect":"none","speed":"fast"}}},"ajax":[],"user":{"uid":0,"permissionsHash":"3be2b56b6266d2721cb15adb8f2d13753e8808a7d57cf9df85191c2b970ff051"}}</script>
+<script src="https://freedomhouse.org/sites/default/files/js/js_neOMC6-Rj-sKqKE8q1o4Yjx3ZZTm5nGjZ3CeehmQa4s.js"></script>
+<script src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58261e391890de11"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"11e35e2593","applicationID":"203586362","transactionName":"YQdbbEYHDUBXAURYWFhNeFtADwxdGSZCREdXDmV7WxQGb3ANQlxrcA1LVXYTCl9SB0IcCUQHV1xRFDNfVwFVWVhaBlxKcgkRXncBRFhYWA==","queueTime":0,"applicationTime":72,"atts":"TUBYGg4dHk4=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>
